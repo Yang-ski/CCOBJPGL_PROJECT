@@ -1,28 +1,27 @@
 package app.main;
 
-import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
+import javafx.application.Application;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 
-/**
- * JavaFX App
- */
 public class App extends Application {
 
     private static Scene scene;
 
     @Override
     public void start(Stage stage) throws IOException {
-        scene = new Scene(loadFXML("login"), 0, 0);
+        scene = new Scene(loadFXML("homev3"), Double.POSITIVE_INFINITY, Double.POSITIVE_INFINITY);
         stage.setScene(scene);
+        stage.setMinHeight(400);
+        stage.setMinWidth(600);
         stage.show();
     }
 
-    static void setRoot(String fxml) throws IOException {
+    public static void setRoot(String fxml) throws IOException {
         scene.setRoot(loadFXML(fxml));
     }
 
