@@ -12,15 +12,15 @@
 }
 
 .shadow{
-    -fx-effect: dropShadow(three-pass-box,rgba(0,0,0,0.1), 10.0 , 0.0 , 0.0 ,10.0);
+    -fx-effect: dropShadow(three-pass-box,#0000001a, 10.0 , 0.0 , 0.0 ,10.0);
 }
 
 .selected{
-    -fx-background-color: #F4F5F9;
+    -fx-background-color: #ffffff1f;
 }
 
-.mouse-moved: hover{
-    -fx-background-color: #EFEFEF;
+.mouse-moved:hover {
+    -fx-background-color: #ffffff1f;
 }
 
 .border-radius{
@@ -28,4 +28,9 @@
     -fx-border-radius: 20px;
     -fx-background-radius: 20px;
     -fx-border-style: solid;
+}
+
+.post-image:hover {
+    -fx-cursor: hand;
+    -fx-opacity: 100;
 }

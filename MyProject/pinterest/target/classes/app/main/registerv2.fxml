@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane minHeight="400.0" minWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.main.Registerv2Controller">
+   <center>
+      <StackPane minHeight="400.0" minWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView blendMode="MULTIPLY" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons/regBG.jpg" />
+               </image>
+            </ImageView>
+            <Pane fx:id="filterBG" blendMode="MULTIPLY" depthTest="DISABLE" style="-fx-background-color: grey;" />
+            <StackPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="900.0" prefWidth="600.0">
+               <children>
+                  <VBox fx:id="regMainLayout" style="-fx-background-color: white; -fx-background-radius: 90;">
+                     <children>
+                        <StackPane fx:id="regLogoContainer" prefHeight="80.0" prefWidth="580.0">
+                           <children>
+                              <ImageView fx:id="regLogo" fitHeight="60.0" fitWidth="60.0" preserveRatio="true">
+                                 <image>
+                                    <Image url="@icons/pinterest.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </StackPane>
+                        <StackPane fx:id="regHeaderContainer" alignment="TOP_CENTER" prefHeight="60.0" prefWidth="600.0">
+                           <children>
+                              <Label fx:id="regHeader" text="Create new account" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="Arial Rounded MT Bold" size="30.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </StackPane>
+                        <StackPane fx:id="regUserLabelContainer" alignment="TOP_LEFT">
+                           <children>
+                              <Label fx:id="regUserLabel" alignment="TOP_LEFT" text="Username" textFill="#666666">
+                                 <font>
+                                    <Font name="Arial Rounded MT Bold" size="20.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="100.0" />
+                                 </padding>
+                              </Label>
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </StackPane>
+                        <StackPane fx:id="regUserContainer" maxHeight="60.0" prefHeight="60.0" prefWidth="600.0">
+                           <children>
+                              <TextField fx:id="regUserField" maxHeight="60.0" maxWidth="400.0" prefHeight="60.0" prefWidth="400.0" promptText="Username" style="-fx-background-color: transparent; -fx-border-color: cb1f2470; -fx-border-radius: 10;">
+                                 <font>
+                                    <Font name="Arial Rounded MT Bold" size="20.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                        </StackPane>
+                        <StackPane fx:id="regInvalidUserContainer" managed="false" prefHeight="0.0" prefWidth="200.0" visible="false">
+                           <children>
+                              <Label fx:id="regInvalidUserLabel" prefHeight="20.0" prefWidth="400.0" text="Username cannot be blank." textFill="#cb1f24">
+                                 <font>
+                                    <Font name="Arial Rounded MT Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </StackPane>
+                        <StackPane fx:id="regUserExistsContainer" managed="false" prefHeight="0.0" prefWidth="200.0" visible="false">
+                           <children>
+                              <Label fx:id="regUserExistsLabel" prefHeight="20.0" prefWidth="400.0" text="Username cannot be blank." textFill="#cb1f24">
+                                 <font>
+                                    <Font name="Arial Rounded MT Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </StackPane>
+                        <StackPane fx:id="regNameLabelContainer" alignment="TOP_LEFT">
+                           <children>
+                              <Label fx:id="regLameLabel" alignment="TOP_LEFT" text="Fullname" textFill="#666666">
+                                 <font>
+                                    <Font name="Arial Rounded MT Bold" size="20.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="100.0" />
+                                 </padding>
+                              </Label>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </StackPane>
+                        <StackPane fx:id="regNameContainer" maxHeight="60.0" prefHeight="60.0" prefWidth="600.0">
+                           <children>
+                              <TextField fx:id="regNameField" maxHeight="60.0" maxWidth="400.0" prefHeight="60.0" prefWidth="400.0" promptText="Fullname" style="-fx-background-color: transparent; -fx-border-color: cb1f2470; -fx-border-radius: 10;">
+                                 <font>
+                                    <Font name="Arial Rounded MT Bold" size="20.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                        </StackPane>
+                        <StackPane fx:id="regInvalidNameContainer" prefHeight="0.0" prefWidth="200.0" visible="false">
+                           <children>
+                              <Label fx:id="regInvalidNameLabel" prefHeight="20.0" prefWidth="400.0" text="Fullname cannot be blank." textFill="#cb1f24">
+                                 <font>
+                                    <Font name="Arial Rounded MT Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </StackPane>
+                        <StackPane fx:id="regContactLabelContainer" alignment="TOP_LEFT">
+                           <children>
+                              <Label fx:id="regContactLabel" alignment="TOP_LEFT" text="Contact" textFill="#666666">
+                                 <font>
+                                    <Font name="Arial Rounded MT Bold" size="20.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="100.0" />
+                                 </padding>
+                              </Label>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </StackPane>
+                        <StackPane fx:id="regContactContainer" maxHeight="60.0" prefHeight="60.0" prefWidth="600.0">
+                           <children>
+                              <TextField fx:id="regContactField" maxHeight="60.0" maxWidth="400.0" prefHeight="60.0" prefWidth="400.0" promptText="Contact no." style="-fx-background-color: transparent; -fx-border-color: cb1f2470; -fx-border-radius: 10;">
+                                 <font>
+                                    <Font name="Arial Rounded MT Bold" size="20.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                        </StackPane>
+                        <StackPane fx:id="regInvalidContactContainer" prefHeight="0.0" prefWidth="200.0" visible="false">
+                           <children>
+                              <Label fx:id="regInvalidContactLabel" prefHeight="20.0" prefWidth="400.0" text="Contact no. cannot be blank" textFill="#cb1f24">
+                                 <font>
+                                    <Font name="Arial Rounded MT Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </StackPane>
+                        <StackPane fx:id="regEmailLabelContainer" alignment="TOP_LEFT">
+                           <children>
+                              <Label fx:id="regEmailLabel" alignment="TOP_LEFT" text="Email" textFill="#666666">
+                                 <font>
+                                    <Font name="Arial Rounded MT Bold" size="20.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="100.0" />
+                                 </padding>
+                              </Label>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </StackPane>
+                        <StackPane fx:id="regEmailContainer" maxHeight="60.0" prefHeight="60.0" prefWidth="600.0">
+                           <children>
+                              <TextField fx:id="regEmailField" maxHeight="60.0" maxWidth="400.0" prefHeight="60.0" prefWidth="400.0" promptText="Email" style="-fx-background-color: transparent; -fx-border-color: cb1f2470; -fx-border-radius: 10;">
+                                 <font>
+                                    <Font name="Arial Rounded MT Bold" size="20.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                        </StackPane>
+                        <StackPane fx:id="regInvalidEmailContainer" prefHeight="0.0" prefWidth="200.0" visible="false">
+                           <children>
+                              <Label fx:id="regInvalidEmailLabel" prefHeight="20.0" prefWidth="400.0" text="Email cannot be blank." textFill="#cb1f24">
+                                 <font>
+                                    <Font name="Arial Rounded MT Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </StackPane>
+                        <StackPane fx:id="regPassLabelContainer" alignment="TOP_LEFT">
+                           <children>
+                              <Label fx:id="regPassLabel" alignment="TOP_LEFT" text="Password" textFill="#666666">
+                                 <font>
+                                    <Font name="Arial Rounded MT Bold" size="20.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="100.0" />
+                                 </padding>
+                              </Label>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </StackPane>
+                        <StackPane fx:id="regPassContainer" maxHeight="60.0" prefHeight="60.0" prefWidth="600.0">
+                           <children>
+                              <PasswordField fx:id="regPassField" maxHeight="60.0" maxWidth="400.0" prefHeight="60.0" prefWidth="400.0" promptText="Password" style="-fx-background-color: transparent; -fx-border-color: cb1f2470; -fx-border-radius: 10;">
+                                 <font>
+                                    <Font name="Arial Rounded MT Bold" size="20.0" />
+                                 </font>
+                              </PasswordField>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                        </StackPane>
+                        <StackPane fx:id="invalidPassContainer" prefHeight="0.0" prefWidth="200.0" visible="false">
+                           <children>
+                              <Label fx:id="regInvalidPassLabel" prefHeight="20.0" prefWidth="400.0" text="Password cannot be blank." textFill="#cb1f24">
+                                 <font>
+                                    <Font name="Arial Rounded MT Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </StackPane>
+                        <StackPane fx:id="regSignUpContainer" maxHeight="60.0" prefHeight="60.0" prefWidth="600.0">
+                           <children>
+                              <Button fx:id="regSignUpButton" maxHeight="60.0" maxWidth="430.0" mnemonicParsing="false" onAction="#signUpAction" prefHeight="60.0" prefWidth="430.0" style="-fx-background-color: #cb1f24; -fx-background-radius: 100;" text="Sign up" textFill="WHITE">
+                                 <font>
+                                    <Font name="Arial Rounded MT Bold" size="20.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="15.0" />
+                           </VBox.margin>
+                        </StackPane>
+                        <StackPane fx:id="regTermsContainer" prefWidth="200.0">
+                           <children>
+                              <Label fx:id="regTermsLabel" alignment="CENTER" maxHeight="60.0" prefHeight="60.0" prefWidth="400.0" text="By continuing, you agree to Pinterest's Terms of Services and Acknowledge you've read our Privacy and Policy. Notice at collection." textAlignment="CENTER" textFill="#666666" wrapText="true">
+                                 <font>
+                                    <Font name="Arial Rounded MT Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="15.0" />
+                           </VBox.margin>
+                        </StackPane>
+                        <StackPane fx:id="regSubSignInButtonContainer" maxHeight="60.0" prefHeight="60.0" prefWidth="600.0">
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                           <children>
+                              <Button fx:id="regSubSignInButton" maxHeight="60.0" maxWidth="400.0" mnemonicParsing="false" onAction="#signInAction" prefHeight="60.0" prefWidth="400.0" style="-fx-background-color: transparent;" text="Already a member? Sign in." textFill="#666666">
+                                 <font>
+                                    <Font name="Arial Rounded MT Bold" size="20.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </StackPane>
+                     </children>
+                  </VBox>
+               </children>
+            </StackPane>
+         </children>
+      </StackPane>
+   </center>
+</BorderPane>

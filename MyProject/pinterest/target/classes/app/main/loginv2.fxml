@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane minHeight="400.0" minWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.main.Loginv2Controller">
+   <center>
+      <StackPane minHeight="400.0" minWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView blendMode="MULTIPLY" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons/logBG.jpg" />
+               </image>
+            </ImageView>
+            <Pane fx:id="filterBG" blendMode="MULTIPLY" depthTest="DISABLE" style="-fx-background-color: grey;" />
+            <StackPane alignment="TOP_LEFT" prefHeight="150.0" prefWidth="200.0">
+               <children>
+                  <HBox>
+                     <children>
+                        <Button fx:id="signUpButton" mnemonicParsing="false" onAction="#signUpAction" prefHeight="80.0" prefWidth="180.0" style="-fx-background-color: white; -fx-background-radius: 100;" text="Sign up" HBox.hgrow="ALWAYS">
+                           <font>
+                              <Font name="Arial Rounded MT Bold" size="34.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="80.0" top="80.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </StackPane>
+            <StackPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="900.0" prefWidth="600.0">
+               <children>
+                  <VBox fx:id="mainLayout" style="-fx-background-color: white; -fx-background-radius: 90;">
+                     <children>
+                        <StackPane fx:id="logoContainer" prefHeight="80.0" prefWidth="200.0">
+                           <children>
+                              <ImageView fx:id="logo" fitHeight="60.0" fitWidth="60.0" preserveRatio="true">
+                                 <image>
+                                    <Image url="@icons/pinterest.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="60.0" />
+                           </VBox.margin>
+                        </StackPane>
+                        <StackPane fx:id="headerContainer" alignment="TOP_CENTER" prefHeight="60.0" prefWidth="600.0">
+                           <children>
+                              <Label fx:id="header" text="Log in to see more" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="Arial Rounded MT Bold" size="30.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="20.0" />
+                           </VBox.margin>
+                        </StackPane>
+                        <StackPane fx:id="userLabelContainer" alignment="TOP_LEFT">
+                           <children>
+                              <Label fx:id="userLabel" alignment="TOP_LEFT" text="Username" textFill="#666666">
+                                 <font>
+                                    <Font name="Arial Rounded MT Bold" size="20.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="100.0" />
+                                 </padding>
+                              </Label>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="20.0" />
+                           </VBox.margin>
+                        </StackPane>
+                        <StackPane fx:id="userContainer" maxHeight="60.0" prefHeight="60.0" prefWidth="600.0">
+                           <children>
+                              <TextField fx:id="userField" maxHeight="60.0" maxWidth="400.0" prefHeight="60.0" prefWidth="400.0" promptText="Username" style="-fx-background-color: transparent; -fx-border-color: cb1f2470; -fx-border-radius: 10;">
+                                 <font>
+                                    <Font name="Arial Rounded MT Bold" size="20.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="20.0" />
+                           </VBox.margin>
+                        </StackPane>
+                        <StackPane fx:id="invalidUserContainer" alignment="CENTER_LEFT" managed="false" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="20.0" prefWidth="400.0">
+                           <children>
+                              <Label fx:id="invalidUser" text="Username cannot be blank" textFill="#cb1f24">
+                                 <font>
+                                    <Font name="Arial Rounded MT Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <VBox.margin>
+                              <Insets left="100.0" top="5.0" />
+                           </VBox.margin>
+                        </StackPane>
+                        <StackPane fx:id="passLabelContainer" alignment="TOP_LEFT">
+                           <children>
+                              <Label fx:id="passLabel" alignment="TOP_LEFT" text="Password" textFill="#666666">
+                                 <font>
+                                    <Font name="Arial Rounded MT Bold" size="20.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="100.0" />
+                                 </padding>
+                              </Label>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="20.0" />
+                           </VBox.margin>
+                        </StackPane>
+                        <StackPane fx:id="passContainer" maxHeight="60.0" prefHeight="60.0" prefWidth="600.0">
+                           <children>
+                              <PasswordField fx:id="passField" maxHeight="60.0" maxWidth="400.0" prefHeight="60.0" prefWidth="400.0" promptText="Password" style="-fx-background-color: transparent; -fx-border-color: cb1f2470; -fx-border-radius: 10;">
+                                 <font>
+                                    <Font name="Arial Rounded MT Bold" size="20.0" />
+                                 </font>
+                              </PasswordField>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="20.0" />
+                           </VBox.margin>
+                        </StackPane>
+                        <StackPane fx:id="invalidPasswordContainer" alignment="CENTER_LEFT" managed="false" prefHeight="20.0" prefWidth="400.0">
+                           <children>
+                              <Label fx:id="invalidPassword" text="Password cannot be blank" textFill="#cb1f24">
+                                 <font>
+                                    <Font name="Arial Rounded MT Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <VBox.margin>
+                              <Insets left="100.0" top="5.0" />
+                           </VBox.margin>
+                        </StackPane>
+                        <StackPane fx:id="forgotPassContainer" alignment="CENTER_LEFT" maxHeight="0.0" prefHeight="0.0" prefWidth="600.0">
+                           <children>
+                              <Button fx:id="forgotPassButton" mnemonicParsing="false" onAction="#forgotPasswordAction" style="-fx-background-color: transparent;" text="Forgot your password?" textFill="#666666">
+                                 <font>
+                                    <Font name="Arial Rounded MT Bold" size="20.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                           <VBox.margin>
+                              <Insets left="75.0" top="15.0" />
+                           </VBox.margin>
+                        </StackPane>
+                        <StackPane fx:id="loginContainer" maxHeight="60.0" prefHeight="60.0" prefWidth="600.0">
+                           <children>
+                              <Button fx:id="loginButton" maxHeight="60.0" maxWidth="430.0" mnemonicParsing="false" onAction="#logInAction" prefHeight="60.0" prefWidth="430.0" style="-fx-background-color: cb1f24; -fx-background-radius: 100;" text="Login" textFill="WHITE">
+                                 <font>
+                                    <Font name="Arial Rounded MT Bold" size="20.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="15.0" />
+                           </VBox.margin>
+                        </StackPane>
+                        <StackPane fx:id="textContainer" prefWidth="200.0">
+                           <children>
+                              <Label fx:id="termsLabel" alignment="CENTER" maxHeight="60.0" prefHeight="60.0" prefWidth="400.0" text="By continuing, you agree to Pinterest's Terms of Services and Acknowledge you've read our Privacy and Policy. Notice at collection." textAlignment="CENTER" textFill="#666666" wrapText="true">
+                                 <font>
+                                    <Font name="Arial Rounded MT Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="29.0" />
+                           </VBox.margin>
+                        </StackPane>
+                        <StackPane fx:id="subSignUpContainer" maxHeight="60.0" prefHeight="60.0" prefWidth="600.0">
+                           <children>
+                              <Button fx:id="subSignUpButton" maxHeight="60.0" maxWidth="400.0" mnemonicParsing="false" onAction="#subSignUpAction" prefHeight="60.0" prefWidth="400.0" style="-fx-background-color: transparent;" text="Don't have an account? Sign up." textFill="#666666">
+                                 <font>
+                                    <Font name="Arial Rounded MT Bold" size="20.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="20.0" />
+                           </VBox.margin>
+                        </StackPane>
+                     </children>
+                  </VBox>
+               </children>
+            </StackPane>
+         </children>
+      </StackPane>
+   </center>
+</BorderPane>

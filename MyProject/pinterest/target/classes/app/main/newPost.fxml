@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.main.newPostController">
+   <children>
+      <BorderPane fx:id="layout" prefHeight="1080.0" prefWidth="1920.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <center>
+            <BorderPane fx:id="displayContentPane" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <top>
+                  <VBox BorderPane.alignment="CENTER">
+                     <children>
+                        <HBox fx:id="searchBarLayout" alignment="CENTER_LEFT" prefHeight="80.0" prefWidth="1920.0">
+                           <children>
+                              <AnchorPane maxWidth="1790.0" prefWidth="1700.0" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <TextField fx:id="searchField" prefHeight="50.0" promptText="Type here to search" style="-fx-background-color: #0000001a; -fx-background-radius: 30;" styleClass="shadow" stylesheets="@style.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="15.0">
+                                       <font>
+                                          <Font name="Arial Rounded MT Bold" size="14.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets left="20.0" />
+                                       </padding>
+                                       <cursor>
+                                          <Cursor fx:constant="TEXT" />
+                                       </cursor>
+                                    </TextField>
+                                    <Button fx:id="searchButton" mnemonicParsing="false" onAction="#onActionSearchButton" prefHeight="40.0" prefWidth="105.0" styleClass="search-button" stylesheets="@style.css" text="Search" textFill="WHITE" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="20.0">
+                                       <font>
+                                          <Font name="Arial Bold" size="12.0" />
+                                       </font>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </Button>
+                                 </children>
+                                 <padding>
+                                    <Insets left="20.0" />
+                                 </padding>
+                              </AnchorPane>
+                              <Pane prefHeight="80.0" prefWidth="0.0" HBox.hgrow="ALWAYS" />
+                              <Button fx:id="viewAccountButton" mnemonicParsing="false" onAction="#onActionViewAccount" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: transparent;">
+                                 <graphic>
+                                    <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@image/profile-user.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <HBox.margin>
+                                    <Insets right="20.0" />
+                                 </HBox.margin>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                           </children>
+                        </HBox>
+                        <Pane prefHeight="1.0" style="-fx-background-color: #0000001a;" />
+                        <AnchorPane prefHeight="80.0">
+                           <children>
+                              <Label text="Create Pin" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="0.0">
+                                 <font>
+                                    <Font name="Arial Rounded MT Bold" size="30.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                        <Pane prefHeight="1.0" style="-fx-background-color: #0000001a;" />
+                     </children>
+                  </VBox>
+               </top>
+               <center>
+                  <StackPane prefHeight="150.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <HBox maxHeight="-Infinity" maxWidth="-Infinity" spacing="40.0">
+                           <children>
+                              <VBox alignment="BOTTOM_CENTER">
+                                 <children>
+                                    <StackPane alignment="TOP_CENTER" prefHeight="550.0" prefWidth="475.0">
+                                       <children>
+                                          <ImageView fx:id="previewPost" fitHeight="550.0" fitWidth="475.0" pickOnBounds="true" preserveRatio="true" />
+                                       </children>
+                                    </StackPane>
+                                    <Button fx:id="uploadButton" mnemonicParsing="false" onAction="#onActionUploadButton" prefHeight="60.0" prefWidth="475.0" style="-fx-background-color: #0000001a; -fx-background-radius: 15;" text="Click to Upload Image">
+                                       <font>
+                                          <Font name="Arial Rounded MT Bold" size="12.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets top="20.0" />
+                                       </VBox.margin>
+                                    </Button>
+                                 </children>
+                              </VBox>
+                              <VBox prefWidth="475.0">
+                                 <children>
+                                    <AnchorPane>
+                                       <children>
+                                          <TextField fx:id="newPostCaption" prefHeight="70.0" prefWidth="475.0" promptText="Add a caption" style="-fx-background-color: transparent; -fx-border-radius: 15; -fx-border-color: black; -fx-border-image-width: 1;">
+                                             <font>
+                                                <Font name="Arial Rounded MT Bold" size="12.0" />
+                                             </font>
+                                             <padding>
+                                                <Insets left="14.0" top="20.0" />
+                                             </padding>
+                                          </TextField>
+                                          <Label alignment="CENTER" prefHeight="20.0" text="Caption" textFill="#000000a1">
+                                             <font>
+                                                <Font name="Arial Rounded MT Bold" size="8.0" />
+                                             </font>
+                                             <padding>
+                                                <Insets left="14.0" top="18.0" />
+                                             </padding>
+                                          </Label>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets bottom="15.0" />
+                                       </VBox.margin>
+                                    </AnchorPane>
+                                    <Label alignment="CENTER" prefHeight="20.0" text="Category" textFill="#000000a1">
+                                       <font>
+                                          <Font name="Arial Rounded MT Bold" size="12.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <AnchorPane>
+                                       <children>
+                                          <TextField fx:id="newPostCategory" prefHeight="70.0" prefWidth="475.0" promptText="Add a Category" style="-fx-background-color: transparent; -fx-border-radius: 15; -fx-border-color: black; -fx-border-image-width: 1;">
+                                             <font>
+                                                <Font name="Arial Rounded MT Bold" size="12.0" />
+                                             </font>
+                                             <padding>
+                                                <Insets left="14.0" />
+                                             </padding>
+                                          </TextField>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane prefWidth="450.0" VBox.vgrow="ALWAYS">
+                                       <children>
+                                          <Button fx:id="publishButton" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#onActionPublishPost" prefHeight="60.0" prefWidth="140.0" style="-fx-background-color: cb1f24; -fx-background-radius: 15;" text="Publish" textFill="WHITE" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                             <font>
+                                                <Font name="Arial Rounded MT Bold" size="20.0" />
+                                             </font>
+                                          </Button>
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </VBox>
+                           </children>
+                           <StackPane.margin>
+                              <Insets bottom="160.0" right="40.0" />
+                           </StackPane.margin>
+                        </HBox>
+                     </children>
+                  </StackPane>
+               </center>
+            </BorderPane>
+         </center>
+         <left>
+            <HBox maxWidth="80.0" minWidth="80.0" prefWidth="80.0" stylesheets="@style.css" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox maxWidth="80.0" minWidth="80.0" prefWidth="80.0">
+                     <children>
+                        <HBox fx:id="logoContainer" alignment="CENTER" prefHeight="80.0" prefWidth="80.0">
+                           <children>
+                              <Button fx:id="mainButton" mnemonicParsing="false" onAction="#onActionMainButton" style="-fx-background-color: transparent;">
+                                 <graphic>
+                                    <ImageView fx:id="searchLogo" fitHeight="30.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@image/pinterest.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="80.0" prefWidth="80.0" stylesheets="@style.css">
+                           <children>
+                              <Button fx:id="homeButton" mnemonicParsing="false" onAction="#onActionHomeButton" style="-fx-background-color: transparent;">
+                                 <graphic>
+                                    <ImageView fitHeight="30.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@image/home.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                           </children>
+                           <styleClass>
+                              <String fx:value="mouse-moved" />
+                              <String fx:value="selected" />
+                           </styleClass>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="80.0" prefWidth="80.0" stylesheets="@style.css">
+                           <children>
+                              <Button fx:id="createPost" mnemonicParsing="false" onAction="#onActionCreatePostButton" style="-fx-background-color: transparent;">
+                                 <graphic>
+                                    <ImageView fitHeight="30.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@image/create.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                           </children>
+                           <styleClass>
+                              <String fx:value="mouse-moved" />
+                              <String fx:value="selected" />
+                           </styleClass>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="80.0" prefWidth="80.0" stylesheets="@style.css">
+                           <children>
+                              <Button fx:id="notifsButton" mnemonicParsing="false" onAction="#onActionNotifButton" style="-fx-background-color: transparent;">
+                                 <graphic>
+                                    <ImageView fitHeight="30.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@image/notification.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                           </children>
+                           <styleClass>
+                              <String fx:value="mouse-moved" />
+                              <String fx:value="selected" />
+                           </styleClass>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="80.0" prefWidth="80.0" stylesheets="@style.css">
+                           <children>
+                              <Button fx:id="messagesButton" mnemonicParsing="false" onAction="#onActionMessagesButton" style="-fx-background-color: transparent;">
+                                 <graphic>
+                                    <ImageView fitHeight="30.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@image/messages.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                           </children>
+                           <styleClass>
+                              <String fx:value="mouse-moved" />
+                              <String fx:value="selected" />
+                           </styleClass>
+                        </HBox>
+                        <!-- Spacer to push settings button to the bottom -->
+                        <Pane VBox.vgrow="ALWAYS" />
+                        <!-- Settings button at the bottom with margin -->
+                        <HBox alignment="CENTER" prefHeight="80.0" prefWidth="80.0" stylesheets="@style.css">
+                           <children>
+                              <Button fx:id="settingsButton" alignment="CENTER" contentDisplay="CENTER" graphicTextGap="0.0" mnemonicParsing="false" onAction="#onActionSettingsButton" style="-fx-background-color: transparent;">
+                                 <graphic>
+                                    <ImageView fitHeight="30.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@image/settings.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                           </children>
+                           <styleClass>
+                              <String fx:value="mouse-moved" />
+                              <String fx:value="selected" />
+                           </styleClass>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <AnchorPane>
+                     <children>
+                        <Pane prefWidth="1.0" style="-fx-background-color: #0000001a;" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </HBox>
+         </left>
+      </BorderPane>
+   </children>
+</AnchorPane>
